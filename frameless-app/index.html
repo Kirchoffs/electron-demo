@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'unsafe-inline'"
+    />
+    <title>Hello from Electron renderer!</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: aliceblue;
+        color: darkslateblue;
+      }
+
+      h1 {
+        color: darkblue;
+      }
+
+      .title-bar {
+        -webkit-app-region: drag;
+        background-color: bisque;
+        padding: 12px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+      }
+
+      .close-button {
+        -webkit-app-region: no-drag;
+        background: transparent;
+        color: cadetblue;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .main-content {
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title-bar">
+      <p>Hello from Electron renderer!</p>
+      <button class="close-button">X</button>
+    </div>
+    <div class="main-content">
+      <p>Hi there</p>
+      <p id="info"></p>
+      <p id="ping"></p>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>

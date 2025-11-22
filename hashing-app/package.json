@@ -1,0 +1,30 @@
+{
+  "name": "hashing-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon --watch . --ext html,css,js --exec electron .",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "org.syh.demo.hashing-app",
+    "productName": "Hashing App",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.1.11"
+  }
+}
